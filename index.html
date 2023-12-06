@@ -4,15 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Base - Tailwind CSS Startup Template</title>
+    <title>AI Agency - AUtomate your stuff</title>
     <link rel="icon" href="favicon.ico" />
     <link href="style.css" rel="stylesheet" />
   </head>
   <body
     x-data="{ page: 'home', 'darkMode': true, 'stickyMenu': false, 'navigationOpen': false, 'scrollTop': false }"
     x-init="
-    darkMode = JSON.parse(localStorage.getItem('darkMode')) !== null ? JSON.parse(localStorage.getItem('darkMode')) : true;
-    $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(value)))"
+         darkMode = JSON.parse(localStorage.getItem('darkMode'));
+         $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(value)))"
     :class="{'b eh': darkMode === true}"
   >
     <!-- ===== Header Start ===== -->
@@ -75,72 +75,7 @@
                 >
               </li>
               <li><a href="index.html#features" class="xl">Features</a></li>
-              <li class="c i" x-data="{ dropdown: false }">
-                <a
-                  href="#"
-                  class="xl tc wf yf bg"
-                  @click.prevent="dropdown = !dropdown"
-                  :class="{ 'mk': page === 'blog-grid' || page === 'blog-single' || page === 'signin' || page === 'signup' || page === '404' }"
-                >
-                  Pages
-
-                  <svg
-                    :class="{ 'wh': dropdown }"
-                    class="th mm we fd pf"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 512 512"
-                  >
-                    <path
-                      d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
-                    />
-                  </svg>
-                </a>
-
-                <!-- Dropdown Start -->
-                <ul class="a" :class="{ 'tc': dropdown }">
-                  <li>
-                    <a
-                      href="blog-grid.html"
-                      class="xl"
-                      :class="{ 'mk': page === 'blog-grid' }"
-                      >Blog Grid</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="blog-single.html"
-                      class="xl"
-                      :class="{ 'mk': page === 'blog-single' }"
-                      >Blog Single</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="signin.html"
-                      class="xl"
-                      :class="{ 'mk': page === 'signin' }"
-                      >Sign In</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="signup.html"
-                      class="xl"
-                      :class="{ 'mk': page === 'signup' }"
-                      >Sign Up</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="404.html"
-                      class="xl"
-                      :class="{ 'mk': page === '404' }"
-                      >404</a
-                    >
-                  </li>
-                </ul>
-                <!-- Dropdown End -->
-              </li>
+              
               <li><a href="index.html#support" class="xl">Support</a></li>
             </ul>
           </nav>
@@ -157,7 +92,7 @@
                   @change="darkMode = !darkMode"
                   class="pf vd yc uk h r za ab"
                 />
-                <!-- Icon Sun -->
+             
                 <svg
                   :class="{ 'wn' : page === 'home', 'xh' : page === 'home' && stickyMenu }"
                   class="th om"
@@ -172,22 +107,23 @@
                     fill=""
                   />
                 </svg>
-                <!-- Icon Sun -->
+             
                 <img class="xc nm" src="images/icon-moon.svg" alt="Moon" />
               </label>
             </div>
 
-            <a
+            <!-- <a
               href="signin.html"
               :class="{ 'nk yl' : page === 'home', 'ok' : page === 'home' && stickyMenu }"
               class="ek pk xl"
               >Sign In</a
-            >
+            > -->
             <a
               href="signup.html"
               :class="{ 'hh/[0.15]' : page === 'home', 'sh' : page === 'home' && stickyMenu }"
               class="lk gh dk rg tc wf xf _l gi hi"
-              >Sign Up</a
+              style="background-color: #4E6BFF; color:white;"
+              >Book a Call</a
             >
           </div>
         </div>
@@ -204,8 +140,13 @@
           <!-- <img src="images/shape-01.svg" alt="shape" class="xc 2xl:ud-block h t -ud-left-[10%] ua" />
           <img src="images/shape-02.svg" alt="shape" class="xc 2xl:ud-block h u p va" />
           <img src="images/shape-03.svg" alt="shape" class="xc 2xl:ud-block h v w va" />
-          <img src="images/shape-04.svg" alt="shape" class="h q r" /> -->
-          <!-- <img src="images/ai2.png" alt="Woman" class="h q r ua" style="margin-top:100px; margin-right:40px;" width="70%" /> -->
+          <img src="images/shape-04.svg" alt="shape" class="h q r" />  -->
+        <span class="rc h s r vd fd/5 fh rm"></span>
+        <img src="images/shape-08.svg" alt="Shape Bg" class="h q r" />
+        <img src="images/shape-09.svg" alt="Shape" class="of h y z/2" />
+        <img src="images/shape-10.svg" alt="Shape" class="h _ aa" />
+        <img src="images/shape-11.svg" alt="Shape" class="of h m ba" />
+        <img src="images/aipng.png" alt="Woman" class="h q r ua" style="margin-top:120px; margin-right:20%; padding: 10px; border-radius: 10%;" width="70%" />
         </div>
 
         <!-- Hero Content -->
@@ -307,13 +248,11 @@
                 We Make Our customers happy by giving Best services.
               </h2>
               <p class="uo">
-                It is a long established fact that a reader will be distracted
-                by the readable content of a page when looking at its layout.
-                The point of using Lorem Ipsum.
+                Elevating happiness through exceptional service. We make our customers happy with the best.
               </p>
 
               <a
-                href="https://www.youtube.com/watch?v=xcJtL7QggTI"
+                href="https://youtu.be/-a6E-r8W2Bs?feature=shared"
                 data-fslightbox
                 class="vc wf hg mb"
               >
@@ -321,7 +260,7 @@
                   <span class="nf h vc yc vd rg gh qk -ud-z-1"></span>
                   <img src="images/icon-play.svg" alt="Play" />
                 </span>
-                <span class="kk">SEE HOW WE WORK</span>
+                <span class="kk" style="color:white;">SEE HOW WE WORK</span>
               </a>
             </div>
           </div>
@@ -340,7 +279,7 @@
 
         <!-- Section Title Start -->
         <div
-          x-data="{ sectionTitle: `Meet With Our Creative Dedicated Team`, sectionTitleText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.`}"
+          x-data="{ sectionTitle: `Meet With Our Creative Dedicated Team`}"
         >
           <div class="animate_top bb ze rj ki xn vq">
             <h2
@@ -357,7 +296,7 @@
             <!-- Team Item -->
             <div class="animate_top rj">
               <div class="c i pg z-1">
-                <img class="vd" src="images/team-01.png" alt="Team" />
+                <!-- <img class="vd" src="images/team-01.png" alt="Team" /> -->
 
                 <div class="ef im nl il">
                   <span
@@ -422,8 +361,8 @@
                 </div>
               </div>
 
-              <h4 class="yj go kk wm ob zb">Olivia Andrium</h4>
-              <p>Product Manager</p>
+              <h3 class="yj go kk wm ob zb">Together, we shape innovation and bring passion to every project</h3>
+              <!-- <p>Together, we shape innovation and bring passion to every project</p> -->
             </div>
 
             <!-- Team Item -->
@@ -494,8 +433,8 @@
                 </div>
               </div>
 
-              <h4 class="yj go kk wm ob zb">Jemse Kemorun</h4>
-              <p>Product Designer</p>
+              <h4 class="yj go kk wm ob zb">Kathan Mehta</h4>
+              <!-- <p>Product Designer</p> -->
             </div>
 
             <!-- Team Item -->
@@ -566,8 +505,8 @@
                 </div>
               </div>
 
-              <h4 class="yj go kk wm ob zb">Avi Pestarica</h4>
-              <p>Web Designer</p>
+              <h4 class="yj go kk wm ob zb"> Malav Shah</h4>
+              <!-- <p>Web Designer</p> -->
             </div>
           </div>
         </div>
@@ -575,10 +514,10 @@
       <!-- ===== Team End ===== -->
 
       <!-- ===== Services Start ===== -->
-      <section class="lj tp kr">
+      <section class="lj tp kr" id="offer">
         <!-- Section Title Start -->
         <div
-          x-data="{ sectionTitle: `We Offer The Best Quality Service for You`, sectionTitleText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.`}"
+          x-data="{ sectionTitle: `We Offer following Services`, sectionTitleText: `Top-notch service crafted just for you.`}"
         >
           <div class="animate_top bb ze rj ki xn vq">
             <h2
@@ -595,60 +534,54 @@
             <!-- Service Item -->
             <div class="animate_top sg oi pi zq ml il am cn _m">
               <img src="images/icon-04.svg" alt="Icon" />
-              <h4 class="ek zj kk wm nb _b">Crafted for Startups</h4>
+              <h4 class="ek zj kk wm nb _b">AI Automation</h4>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-                convallis tortor.
+                Streamline processes and harness the power of artificial intelligence to transform your workflow.
               </p>
             </div>
 
             <!-- Service Item -->
             <div class="animate_top sg oi pi zq ml il am cn _m">
               <img src="images/icon-05.svg" alt="Icon" />
-              <h4 class="ek zj kk wm nb _b">High-quality Design</h4>
+              <h4 class="ek zj kk wm nb _b">AI Powered Content / Media </h4>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-                convallis tortor.
+                Supercharge your content and media with AI to make it even more awesome.
               </p>
             </div>
 
             <!-- Service Item -->
             <div class="animate_top sg oi pi zq ml il am cn _m">
               <img src="images/icon-06.svg" alt="Icon" />
-              <h4 class="ek zj kk wm nb _b">All Essential Sections</h4>
+              <h4 class="ek zj kk wm nb _b">Micro SaaS Development</h4>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-                convallis tortor.
+                SaaS solutions to meet your specific needs, providing scalable and efficient development for a competitive edge.
               </p>
             </div>
 
             <!-- Service Item -->
             <div class="animate_top sg oi pi zq ml il am cn _m">
               <img src="images/icon-07.svg" alt="Icon" />
-              <h4 class="ek zj kk wm nb _b">Speed Optimized</h4>
+              <h4 class="ek zj kk wm nb _b">AI Consulting</h4>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-                convallis tortor.
+                Confidently navigate the AI landscape. Our experts ensure seamless AI integration for optimal business results.
               </p>
             </div>
 
             <!-- Service Item -->
             <div class="animate_top sg oi pi zq ml il am cn _m">
               <img src="images/icon-05.svg" alt="Icon" />
-              <h4 class="ek zj kk wm nb _b">Fully Customizable</h4>
+              <h4 class="ek zj kk wm nb _b">Innovation Acceleration</h4>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-                convallis tortor.
+                growth strategies and cutting-edge AI solutions to drive your business forward with a competitive edge.
               </p>
             </div>
 
             <!-- Service Item -->
             <div class="animate_top sg oi pi zq ml il am cn _m">
               <img src="images/icon-06.svg" alt="Icon" />
-              <h4 class="ek zj kk wm nb _b">Regular Updates</h4>
+              <h4 class="ek zj kk wm nb _b">Enterprise AI Solutions</h4>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-                convallis tortor.
+                Elevate your enterprise with advanced AI solutions for streamlined operations and optimal efficiency.
               </p>
             </div>
           </div>
@@ -657,17 +590,33 @@
       <!-- ===== Services End ===== -->
 
       <!-- ===== Pricing Table Start ===== -->
-      <section x-data="setup()" class="i pg fh rm ji gp uq">
+      <section x-data="setup()" class="i pg fh rm ji gp uq" >
         <!-- Bg Shapes -->
         <img src="images/shape-06.svg" alt="Shape" class="h aa y" />
         <img src="images/shape-03.svg" alt="Shape" class="h ca u" />
         <img src="images/shape-07.svg" alt="Shape" class="h w da ee" />
         <img src="images/shape-12.svg" alt="Shape" class="h p s" />
         <img src="images/shape-13.svg" alt="Shape" class="h r q" />
-
+        <div class="bb ye i z-10 ki xn dr">
+          <div class="tc uf sn tn un gg">
+            <div class="animate_left to/2">
+              <h2 class="fk vj zp pr lk ac">
+                Book a Discovery Call Now
+              </h2>
+              <p class="lk">
+                Book a Discovery Call now to explore tailored solutions and unlock the full potential of automation for your business.
+              </p>
+            </div>
+            <div class="animate_right bf">
+              <a href="/#offer" class="vc ek kk hh rg ol il cm gi hi" style="background-color: #4E6BFF; color: white;">
+                Let's Talk :)
+              </a>
+            </div>
+          </div>
+        </div>
         <!-- Section Title Start -->
-        <div
-          x-data="{ sectionTitle: `We Offer Great Affordable Premium Prices.`, sectionTitleText: `It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.`}"
+        <!-- <div
+          x-data="{ sectionTitle: `We Offer Great Affordable Premium Prices.`}"
         >
           <div class="animate_top bb ze rj ki xn vq">
             <h2
@@ -676,11 +625,11 @@
             ></h2>
             <p class="bb on/5 wo/5 hq" x-text="sectionTitleText"></p>
           </div>
-        </div>
+        </div> -->
         <!-- Section Title End -->
 
         <!-- Pricing switcher -->
-        <div class="tc wf xf jb og">
+        <!-- <div class="tc wf xf jb og">
           <span class="ek kk wm">Bill Monthly</span>
           <button
             class="i rg gm"
@@ -694,17 +643,17 @@
             ></div>
           </button>
           <span class="ek kk wm">Bill Annually</span>
-        </div>
+        </div> -->
 
         <!-- Pricing Table -->
-        <div class="bb ze i va ki xn yq bc">
+        <!-- <div class="bb ze i va ki xn yq bc text-center" style="text-align: center;">
           <div class="wc qf pn xo jg">
             <template x-for="(plan, i) in plans" x-key="i">
-              <!-- Pricing Item -->
+       
               <div class="animate_top rj sg hh sm vk xm hi nj oj">
-                <h4 x-text="plan.name" class="wj kk wm fb"></h4>
+                <h4 x-text="plan.name" class="wj kk wm fb"></h4> -->
 
-                <div class="tc wf xf kg cc">
+                <!-- <div class="tc wf xf kg cc">
                   <h2
                     :class="plan.name == 'Basic' ? 'text-green-500' : ''"
                     x-text="`$${billPlan == 'monthly' ? plan.price.monthly : plan.price.annually}`"
@@ -714,31 +663,32 @@
                     x-text="billPlan == 'monthly' ? '/per month' : '/per year'"
                     class="sc ak kk wm"
                   ></span>
-                </div>
+                </div> -->
 
-                <p class="ur dc">No credit card required</p>
+                <!-- <p class="ur dc">No credit card required</p> -->
 
                 <!-- Button -->
-                <a
+                <!-- <a
                   href="#"
                   class="ek rg lk ml il gi ri"
+                  style="text-align: center; display: block; margin: 0;"
                   :class="plan.name == 'Growth Plan' ? 'gh sl' : 'mh tl'"
                 >
-                  Try for free
-                </a>
+                  Book a Free Call
+                </a> -->
 
                 <!-- Features -->
-                <ul class="tc sf bg ob fb">
+                <!-- <ul class="tc sf bg ob fb">
                   <template x-for="(feature, i) in plan.features" x-key="i">
                     <li x-text="feature"></li>
                   </template>
-                </ul>
+                </ul> -->
 
-                <p class="kk wm">7-day free trial</p>
-              </div>
+                <!-- <p class="kk wm">7-day free trial</p> -->
+              <!-- </div>
             </template>
           </div>
-        </div>
+        </div> -->
       </section>
       <!-- ===== Pricing Table End ===== -->
 
@@ -746,7 +696,7 @@
       <section class="pg pj vp mr oj wp nr">
         <!-- Section Title Start -->
         <div
-          x-data="{ sectionTitle: `We Offer Great Affordable Premium Prices.`, sectionTitleText: `It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.`}"
+          x-data="{ sectionTitle: `Here are some of the awesome projects we have worked on.`, sectionTitleText: `Discover our portfolio of remarkable projects, showcasing innovation and expertise at its best.`}"
         >
           <div class="animate_top bb ze rj ki xn vq">
             <h2
@@ -932,7 +882,7 @@
       <section class="hj rp hr">
         <!-- Section Title Start -->
         <div
-          x-data="{ sectionTitle: `Client’s Testimonials`, sectionTitleText: `It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.`}"
+          x-data="{ sectionTitle: `Client’s Testimonials`}"
         >
           <div class="animate_top bb ze rj ki xn vq">
             <h2
@@ -1039,20 +989,20 @@
         <div class="bb ze i va ki xn br">
           <div class="tc uf sn tn xf un gg">
             <div class="animate_top me/5 ln rj">
-              <h2 class="gk vj zp or kk wm hc">785</h2>
-              <p class="ek bk aq">Global Brands</p>
+              <h2 class="gk vj zp or kk wm hc">100+</h2>
+              <p class="ek bk aq">Projects</p>
             </div>
             <div class="animate_top me/5 ln rj">
-              <h2 class="gk vj zp or kk wm hc">533</h2>
+              <h2 class="gk vj zp or kk wm hc">14+</h2>
               <p class="ek bk aq">Happy Clients</p>
             </div>
             <div class="animate_top me/5 ln rj">
-              <h2 class="gk vj zp or kk wm hc">865</h2>
+              <h2 class="gk vj zp or kk wm hc">2</h2>
               <p class="ek bk aq">Winning Award</p>
             </div>
             <div class="animate_top me/5 ln rj">
-              <h2 class="gk vj zp or kk wm hc">346</h2>
-              <p class="ek bk aq">Happy Clients</p>
+              <h2 class="gk vj zp or kk wm hc">100k+</h2>
+              <p class="ek bk aq">Revenue Generated</p>
             </div>
           </div>
         </div>
@@ -1063,7 +1013,7 @@
       <section class="pj vp mr">
         <!-- Section Title Start -->
         <div
-          x-data="{ sectionTitle: `Trusted by Global Brands`, sectionTitleText: `It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.`}"
+          x-data="{ sectionTitle: `Trusted by Global Brands`}"
         >
           <div class="animate_top bb ze rj ki xn vq">
             <h2
@@ -1157,7 +1107,7 @@
       <!-- ===== Blog Start ===== -->
       <section class="ji gp uq">
         <!-- Section Title Start -->
-        <div
+        <!-- <div
           x-data="{ sectionTitle: `Latest Blogs & News`, sectionTitleText: `It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.`}"
         >
           <div class="animate_top bb ze rj ki xn vq">
@@ -1167,12 +1117,12 @@
             ></h2>
             <p class="bb on/5 wo/5 hq" x-text="sectionTitleText"></p>
           </div>
-        </div>
+        </div> -->
         <!-- Section Title End -->
 
-        <div class="bb ye ki xn vq jb jo">
+        <!-- <div class="bb ye ki xn vq jb jo">
           <div class="wc qf pn xo zf iq">
-            <!-- Blog Item -->
+     
             <div class="animate_top sg vk rm xm">
               <div class="c rc i z-1 pg">
                 <img class="w-full" src="images/blog-01.png" alt="Blog" />
@@ -1205,7 +1155,7 @@
               </div>
             </div>
 
-            <!-- Blog Item -->
+
             <div class="animate_top sg vk rm xm">
               <div class="c rc i z-1 pg">
                 <img class="w-full" src="images/blog-02.png" alt="Blog" />
@@ -1238,7 +1188,7 @@
               </div>
             </div>
 
-            <!-- Blog Item -->
+   
             <div class="animate_top sg vk rm xm">
               <div class="c rc i z-1 pg">
                 <img class="w-full" src="images/blog-03.png" alt="Blog" />
@@ -1271,9 +1221,9 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
       </section>
-      <!-- ===== Blog End ===== -->
+ 
 
       <!-- ===== Contact Start ===== -->
       <section id="support" class="i pg fh rm ji gp uq">
@@ -1299,9 +1249,10 @@
         <!-- Section Title End -->
 
         <div class="i va bb ye ki xn wq jb mo">
-          <div class="tc uf sn tf rn un zf xl:gap-10">
-            <div class="animate_top w-full mn/5 to/3 vk sg hh sm yh rq i pg">
-              <!-- Bg Shapes -->
+         
+            
+
+            <div class="animate_top w-full nn/5 vo/3 vk sg hh sm yh tq">
               <img src="images/shape-03.svg" alt="Shape" class="h la x wd" />
               <img
                 src="images/shape-06.svg"
@@ -1400,81 +1351,8 @@
                     </a>
                   </li>
                 </ul>
-              </div>
             </div>
-
-            <div class="animate_top w-full nn/5 vo/3 vk sg hh sm yh tq">
-              <form
-                action="https://formbold.com/s/unique_form_id"
-                method="POST"
-              >
-                <div class="tc sf yo ap zf ep qb">
-                  <div class="vd to/2">
-                    <label class="rc ac" for="fullname">Full name</label>
-                    <input
-                      type="text"
-                      name="fullname"
-                      id="fullname"
-                      placeholder="Devid Wonder"
-                      class="vd ph sg zk xm _g ch pm hm dm dn em pl/50 xi mi"
-                    />
-                  </div>
-
-                  <div class="vd to/2">
-                    <label class="rc ac" for="email">Email address</label>
-                    <input
-                      type="email"
-                      name="email"
-                      id="email"
-                      placeholder="example@gmail.com"
-                      class="vd ph sg zk xm _g ch pm hm dm dn em pl/50 xi mi"
-                    />
-                  </div>
-                </div>
-
-                <div class="tc sf yo ap zf ep qb">
-                  <div class="vd to/2">
-                    <label class="rc ac" for="phone">Phone number</label>
-                    <input
-                      type="text"
-                      name="phone"
-                      id="phone"
-                      placeholder="+009 3342 3432"
-                      class="vd ph sg zk xm _g ch pm hm dm dn em pl/50 xi mi"
-                    />
-                  </div>
-
-                  <div class="vd to/2">
-                    <label class="rc ac" for="subject">Subject</label>
-                    <input
-                      type="text"
-                      for="subject"
-                      id="subject"
-                      placeholder="Type your subject"
-                      class="vd ph sg zk xm _g ch pm hm dm dn em pl/50 xi mi"
-                    />
-                  </div>
-                </div>
-
-                <div class="fb">
-                  <label class="rc ac" for="message">Message</label>
-                  <textarea
-                    placeholder="Message"
-                    rows="4"
-                    name="message"
-                    id="message"
-                    class="vd ph sg zk xm _g ch pm hm dm dn em pl/50 ci"
-                  ></textarea>
-                </div>
-
-                <div class="tc xf">
-                  <button class="vc rg lk gh ml il hi gi _l">
-                    Send Message
-                  </button>
-                </div>
-              </form>
-            </div>
-          </div>
+          <!-- </div> -->
         </div>
       </section>
       <!-- ===== Contact End ===== -->
@@ -1488,17 +1366,17 @@
           <div class="tc uf sn tn un gg">
             <div class="animate_left to/2">
               <h2 class="fk vj zp pr lk ac">
-                Join with 5000+ Startups Growing with Base.
+                Boost your growth now
               </h2>
-              <p class="lk">
+              <!-- <p class="lk">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
                 quis nibh lorem. Duis sed odio lorem. In a efficitur leo. Ut
                 venenatis rhoncus.
-              </p>
+              </p> -->
             </div>
             <div class="animate_right bf">
-              <a href="#" class="vc ek kk hh rg ol il cm gi hi">
-                Get Started Now
+              <a href="/#offer" class="vc ek kk hh rg ol il cm gi hi">
+                Book a Call
               </a>
             </div>
           </div>
@@ -1520,7 +1398,7 @@
               </a>
 
               <p class="lc fb">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Automating Life with AI 
               </p>
 
               <ul class="tc wf cg">
@@ -1627,7 +1505,7 @@
 
                 <ul>
                   <li><a href="#" class="sc xl vb">Home</a></li>
-                  <li><a href="#" class="sc xl vb">Product</a></li>
+                  <li><a href="/#offer" class="sc xl vb">Services</a></li>
                   <li>
                     <a href="#" class="sc xl vb">
                       Careers
@@ -1638,8 +1516,8 @@
                 </ul>
               </div>
 
-              <div class="animate_top">
-                <h4 class="kk wm tj ec">Services</h4>
+              <!-- <div class="animate_top">
+                <h4 class="kk wm tj ec">Pricing</h4>
 
                 <ul>
                   <li><a href="#" class="sc xl vb">Web Development</a></li>
@@ -1647,7 +1525,7 @@
                   <li><a href="#" class="sc xl vb">Digital Marketing</a></li>
                   <li><a href="#" class="sc xl vb">Ui/Ux Design</a></li>
                 </ul>
-              </div>
+              </div> -->
 
               <div class="animate_top">
                 <h4 class="kk wm tj ec">Support</h4>
@@ -1668,21 +1546,23 @@
                   action="https://formbold.com/s/unique_form_id"
                   method="POST"
                 >
-                  <div class="i">
+                  <div class="i" >
                     <input
                       type="text"
                       placeholder="Email address"
                       class="vd sm _g ch pm vk xm rg gm dm dn gi mi"
                     />
 
-                    <button class="h q fi">
+                    <button class="h q fi" style="background-color: #4E6BFF; border-radius:50%; color:white;">
                       <svg
                         class="th vm ul"
                         width="20"
                         height="20"
                         viewBox="0 0 20 20"
                         fill="none"
+                        style="color: white;"
                         xmlns="http://www.w3.org/2000/svg"
+                       
                       >
                         <g clip-path="url(#clip0_48_1487)">
                           <path
@@ -1716,7 +1596,7 @@
           </div>
 
           <div class="animate_top">
-            <p>&copy; 2025 Base. All rights reserved</p>
+            <p>&copy; 2023 AI Agency. All rights reserved</p>
           </div>
         </div>
         <!-- Footer Bottom -->
@@ -1754,42 +1634,42 @@
           billPlan: "monthly",
 
           plans: [
-            {
-              name: "Starter",
-              price: {
-                monthly: 29,
-                annually: 29 * 12 - 199,
-              },
-              features: [
-                "400 GB Storaget",
-                "Unlimited Photos & Videos",
-                "Exclusive Support",
-              ],
-            },
+            // {
+            //   name: "Starter",
+            //   price: {
+            //     monthly: 29,
+            //     annually: 29 * 12 - 199,
+            //   },
+            //   features: [
+            //     "400 GB Storaget",
+            //     "Unlimited Photos & Videos",
+            //     "Exclusive Support",
+            //   ],
+            // },
             {
               name: "Growth Plan",
-              price: {
-                monthly: 59,
-                annually: 59 * 12 - 100,
-              },
-              features: [
-                "400 GB Storaget",
-                "Unlimited Photos & Videos",
-                "Exclusive Support",
-              ],
+              // price: {
+              //   monthly: 59,
+              //   annually: 59 * 12 - 100,
+              // },
+              // features: [
+              //   "400 GB Storaget",
+              //   "Unlimited Photos & Videos",
+              //   "Exclusive Support",
+              // ],
             },
-            {
-              name: "Business",
-              price: {
-                monthly: 139,
-                annually: 139 * 12 - 100,
-              },
-              features: [
-                "400 GB Storaget",
-                "Unlimited Photos & Videos",
-                "Exclusive Support",
-              ],
-            },
+            // {
+            //   name: "Business",
+            //   price: {
+            //     monthly: 139,
+            //     annually: 139 * 12 - 100,
+            //   },
+            //   features: [
+            //     "400 GB Storaget",
+            //     "Unlimited Photos & Videos",
+            //     "Exclusive Support",
+            //   ],
+            // },
           ],
         };
       };
